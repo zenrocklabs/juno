@@ -1,3 +1,8 @@
+# v6.0.1
+
+### Changes
+- ([\#121](https://github.com/forbole/juno/pull/121)) Added back authz message handler in worker
+
 # v6.0.0
 ### Changes
 - ([\#107](https://github.com/forbole/juno/pull/107)) Removed SDK codec dependency from remote mode
