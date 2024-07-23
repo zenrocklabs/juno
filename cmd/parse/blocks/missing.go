@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"strconv"
 
-	parsecmdtypes "github.com/forbole/juno/v6/cmd/parse/types"
+	parsecmdtypes "github.com/zenrocklabs/juno/cmd/parse/types"
 
 	"github.com/spf13/cobra"
 
-	"github.com/forbole/juno/v6/parser"
-	"github.com/forbole/juno/v6/types/config"
+	"github.com/zenrocklabs/juno/parser"
+	"github.com/zenrocklabs/juno/types/config"
 )
 
 // newMissingCmd returns a Cobra command that allows to fix missing blocks in database

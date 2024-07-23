@@ -11,10 +11,9 @@ import (
 	codectypes "github.com/cosmos/cosmos-sdk/codec/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/tx"
-	"github.com/cosmos/gogoproto/proto"
 	"github.com/spf13/viper"
 
-	"github.com/forbole/juno/v6/types"
+	"github.com/zenrocklabs/juno/types"
 )
 
 func ParseConfig() (*cfg.Config, error) {
@@ -77,14 +76,14 @@ func NewTxFromSdkTx(cdc codec.Codec, tx *tx.Tx) *types.Tx {
 // NewTxBodyFromSdkTxBody allows to build a new TxBody instance from the given tx.TxBody
 func NewTxBodyFromSdkTxBody(cdc codec.Codec, body *tx.TxBody) *types.TxBody {
 	messages := make([]types.Message, len(body.Messages))
-	for i, msg := range body.Messages {
-		err := cdc.UnpackAny(msg, &messages[i])
-		if err != nil {
-			panic(fmt.Errorf("error while unpacking message: %s", err))
-		}
+	// for i, msg := range body.Messages {
+	// 	err := cdc.UnpackAny(msg, &messages[i])
+	// 	if err != nil {
+	// 		panic(fmt.Errorf("error while unpacking message: %s", err))
+	// 	}
 
-		messages[i] = types.NewStandardMessage(i, proto.MessageName(msg), cdc.MustMarshalJSON(msg))
-	}
+	// 	messages[i] = types.NewStandardMessage(i, proto.MessageName(msg), cdc.MustMarshalJSON(msg))
+	// }
 	return &types.TxBody{
 		TxBody:        body,
 		TimeoutHeight: body.TimeoutHeight,

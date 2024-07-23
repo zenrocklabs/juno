@@ -3,12 +3,12 @@ package main
 import (
 	"os"
 
-	"github.com/forbole/juno/v6/cmd/parse/types"
+	"github.com/zenrocklabs/juno/cmd/parse/types"
 
-	"github.com/forbole/juno/v6/modules/messages"
-	"github.com/forbole/juno/v6/modules/registrar"
+	"github.com/zenrocklabs/juno/modules/messages"
+	"github.com/zenrocklabs/juno/modules/registrar"
 
-	"github.com/forbole/juno/v6/cmd"
+	"github.com/zenrocklabs/juno/cmd"
 )
 
 func main() {
