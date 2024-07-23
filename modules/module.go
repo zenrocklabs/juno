@@ -8,7 +8,7 @@ import (
 	tmtypes "github.com/cometbft/cometbft/types"
 	"github.com/go-co-op/gocron"
 
-	"github.com/forbole/juno/v6/types"
+	"github.com/zenrocklabs/juno/types"
 )
 
 // Module represents a generic module without any particular handling of data

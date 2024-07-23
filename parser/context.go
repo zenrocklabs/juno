@@ -1,11 +1,11 @@
 package parser
 
 import (
-	"github.com/forbole/juno/v6/logging"
-	"github.com/forbole/juno/v6/node"
+	"github.com/zenrocklabs/juno/logging"
+	"github.com/zenrocklabs/juno/node"
 
-	"github.com/forbole/juno/v6/database"
-	"github.com/forbole/juno/v6/modules"
+	"github.com/zenrocklabs/juno/database"
+	"github.com/zenrocklabs/juno/modules"
 )
 
 // Context represents the context that is shared among different workers

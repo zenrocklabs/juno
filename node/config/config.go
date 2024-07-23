@@ -3,8 +3,8 @@ package config
 import (
 	"gopkg.in/yaml.v3"
 
-	"github.com/forbole/juno/v6/node/local"
-	"github.com/forbole/juno/v6/node/remote"
+	"github.com/zenrocklabs/juno/node/local"
+	"github.com/zenrocklabs/juno/node/remote"
 )
 
 const (

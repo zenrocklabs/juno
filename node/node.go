@@ -6,7 +6,7 @@ import (
 	constypes "github.com/cometbft/cometbft/consensus/types"
 	tmctypes "github.com/cometbft/cometbft/rpc/core/types"
 
-	"github.com/forbole/juno/v6/types"
+	"github.com/zenrocklabs/juno/types"
 )
 
 type Node interface {

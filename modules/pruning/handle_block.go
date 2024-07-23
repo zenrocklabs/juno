@@ -5,8 +5,8 @@ import (
 
 	tmctypes "github.com/cometbft/cometbft/rpc/core/types"
 
-	"github.com/forbole/juno/v6/database"
-	"github.com/forbole/juno/v6/types"
+	"github.com/zenrocklabs/juno/database"
+	"github.com/zenrocklabs/juno/types"
 )
 
 // HandleBlock implements modules.BlockModule

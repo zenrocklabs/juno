@@ -1,9 +1,9 @@
 package messages
 
 import (
-	"github.com/forbole/juno/v6/database"
-	"github.com/forbole/juno/v6/modules"
-	"github.com/forbole/juno/v6/types"
+	"github.com/zenrocklabs/juno/database"
+	"github.com/zenrocklabs/juno/modules"
+	"github.com/zenrocklabs/juno/types"
 )
 
 var _ modules.Module = &Module{}
