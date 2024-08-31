@@ -216,14 +216,24 @@ func (cp *Node) Tx(hash string) (*types.Transaction, error) {
 
 // Txs implements node.Node
 func (cp *Node) Txs(block *tmctypes.ResultBlock) ([]*types.Transaction, error) {
-	txResponses := make([]*types.Transaction, len(block.Block.Txs))
-	for i, tmTx := range block.Block.Txs {
+	txResponses := make([]*types.Transaction, 0)
+	txs := block.Block.Txs
+	if len(txs) > 0 {
+		// hack to skip the first tx, if it is a vote extension json from the validation module
+		// implemented at this location rather than worker to leave the block that is passed down to callisto intact
+		temp := map[string]any{}
+		err := json.Unmarshal(txs[0], &temp)
+		if err == nil {
+			txs = txs[1:]
+		}
+	}
+	for _, tmTx := range txs {
 		txResponse, err := cp.Tx(fmt.Sprintf("%X", tmTx.Hash()))
 		if err != nil {
 			return nil, err
 		}
 
-		txResponses[i] = txResponse
+		txResponses = append(txResponses, txResponse)
 	}
 
 	return txResponses, nil
